@@ -352,6 +352,12 @@
                 </li>
                 </ul>
        </div>
+       <div class="footer-forms">
+        <p class="footer-form-title">Підпишіться на розсилку</p>
+                <label for="email" class="form-email">Email</label>
+                <input type="email" name="email" id="email"> 
+                <button type="submit" class="footer-btn">Підписатися</button>
+       </div>
        </div>
     </footer>
     
@@ -363,6 +369,35 @@
                         <use href="./img/icons.svg#ion-close-black"></use>
                     </svg>
                 </button>
+                <p class="modal-header">Залиште свої дані, ми вам передзвонимо</p>
+               <form action="">
+                <div class="modal-input-group">
+                <label for="name">Ім'я</label>
+                <input type="text" class="modal-input" name="name" id="name" placeholder="Ім'я">
+                </div>
+
+                <div class="modal-input-group">
+                <label for="tel">Телефон</label>
+                <input type="tel" class="modal-input" name="tel" id="tel" placeholder="Телефон" 
+                 pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}">
+                </div>
+
+                <div class="modal-input-group">
+                 <label for="email">Пошта</label>
+                <input type="email" class="modal-input" id="email" name="email" placeholder="Пошта">
+                   </div>
+
+    <!--<label>Коментар<textarea name="comment" rows="5" placeholder="Введіть текст"></textarea>
+     </label> -->
+     <div class="modal-input-group">
+        <label for="comment">Коментар</label>
+     <textarea class="modal-text" name="comment" id="comment" placeholder="Введіть текст">
+     </textarea>
+     </div>
+     
+                <button type="submit">Відправити</button>
+
+               </form>
             </div>
            </div>
 

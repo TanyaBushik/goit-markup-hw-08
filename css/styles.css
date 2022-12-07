@@ -616,6 +616,29 @@ color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .footer-soc-icons {
   fill: currentColor;
 }
+
+.footer-form-title {
+font-weight: 700;
+line-height: 1.14;
+text-transform: uppercase;
+color: var(--main-background-color);
+}
+.footer-forms {
+  margin-left: 93px;
+}
+
+.footer-btn {
+  width: 110px;
+  height: 30px;
+  padding-left: 28px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--accent-blue);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--main-background-color);
+}
 /*-----------MODAL_WINDOW--------*/
 
 
@@ -641,6 +664,7 @@ min-height: 581px;
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 4px;
 background-color: var(--main-background-color);
+padding: 40px;
 
 transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -666,7 +690,49 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
-
+.modal-header {
+font-weight: 700;
+font-size: 20px;
+line-height: 1.15;
+text-align: center;
+letter-spacing: 0.03em;
+color: var(--secondary-text-color);
+margin-bottom: 12px;
+}
+.modal-input {
+  width: 100%;
+  height: 40px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  margin-bottom: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  
+  padding-left: 12px;
+  color: var(--primary-text-color);
+}
+.modal-input::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-text::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-input-group label {
+display: block;
+}
+.modal-text {
+width: 100%;
+  height: 140px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  margin-bottom: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: vertical;
+  max-height: 250px;
+}
 /*-----------PORTFOLIO--------*/
 /*-----------PORTFOLIO_ABOUT--------*/
 
