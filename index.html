@@ -354,9 +354,16 @@
        </div>
        <div class="footer-forms">
         <p class="footer-form-title">Підпишіться на розсилку</p>
-                <label for="email" class="form-email">Email</label>
-                <input type="email" name="email" id="email"> 
-                <button type="submit" class="footer-btn">Підписатися</button>
+              <div class="footer-form-section">
+                <input type="email" name="email" id="email" class="footer-form-email" placeholder="Email"> 
+                <button type="submit" class="footer-btn">Підписатися
+                    <div class="footer-send-icon">
+                    <svg width="24" height="24">
+                        <use href="./img/icons.svg#icon-icon-send"></use>
+                    </svg>
+                    </div>
+                </button>
+                </div>
        </div>
        </div>
     </footer>
@@ -371,31 +378,39 @@
                 </button>
                 <p class="modal-header">Залиште свої дані, ми вам передзвонимо</p>
                <form action="">
-                <div class="modal-input-group">
-                <label for="name">Ім'я</label>
-                <input type="text" class="modal-input" name="name" id="name" placeholder="Ім'я">
-                </div>
 
                 <div class="modal-input-group">
-                <label for="tel">Телефон</label>
-                <input type="tel" class="modal-input" name="tel" id="tel" placeholder="Телефон" 
+                       <label for="name">Ім'я</label>
+                       <span class="modal-icon">
+                       <svg width="18" height="18">
+                        <use href="./img/icons.svg#icon-person-img"></use>
+                    </svg>
+                    </span>
+                <input type="text" class="modal-input" name="name" id="name">
+            </div>
+
+                <div class="modal-input-group">
+                    <label for="tel">Телефон</label>
+                <input type="tel" class="modal-input" name="tel" id="tel"
                  pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}">
                 </div>
 
                 <div class="modal-input-group">
-                 <label for="email">Пошта</label>
-                <input type="email" class="modal-input" id="email" name="email" placeholder="Пошта">
-                   </div>
+                    <label for="email">Пошта</label>
+                <input type="email" class="modal-input" id="email" name="email">
+            </div>
 
-    <!--<label>Коментар<textarea name="comment" rows="5" placeholder="Введіть текст"></textarea>
-     </label> -->
      <div class="modal-input-group">
         <label for="comment">Коментар</label>
-     <textarea class="modal-text" name="comment" id="comment" placeholder="Введіть текст">
-     </textarea>
+     <textarea name="comment" id="comment" class="modal-text" placeholder="Введіть текст"></textarea>
      </div>
-     
-                <button type="submit">Відправити</button>
+
+    <label>
+      <input type="checkbox" name="agree" value="agree" class="agree-checkbox">
+     Погоджуюся з розсилкою та приймаю <a href="" class="terms">Умови договору</a>
+    </label>
+
+                <button type="submit" class="modal-button">Відправити</button>
 
                </form>
             </div>
