@@ -716,6 +716,11 @@ border-radius: 50%;
 display: flex;
 align-items: center;
 justify-content: center;
+
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-button:hover {
+  fill: var(--accent-blue);
 }
 .modal-header {
 font-weight: 700;
@@ -736,14 +741,17 @@ margin-bottom: 12px;
   margin-bottom: 10px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  
+  cursor: pointer;
   padding-left: 42px;
   color: var(--primary-text-color);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-icon-person {
   position: absolute;
   top: 107px;
   left: 55px;
+  display: inline-block;
 }
 .modal-icon-phone {
    position: absolute;
@@ -756,9 +764,16 @@ margin-bottom: 12px;
   left: 55px;
 }
 
-.modal-input:focus-within > .modal-icon-email {
-border-color: var(--accent-blue);
+.modal-input:focus-within ~ .modal-icon-person,
+.modal-input:focus-within ~ .modal-icon-phone,
+.modal-input:focus-within ~ .modal-icon-email {
+fill: var(--accent-blue);
 }
+.modal-input:focus-within {
+  border: 1px solid var(--accent-blue);
+  outline: none;
+}
+
 .modal-text::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
@@ -776,6 +791,13 @@ display: block;
   border-radius: 4px;
   resize: none;
   padding: 16px;
+  cursor: pointer;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-text:focus-within {
+  border: 1px solid var(--accent-blue);
+  outline: none;
 }
 .modal-button {
 width: 200px;
@@ -787,19 +809,26 @@ line-height: 1.88;
 letter-spacing: 0.06em;
 padding: 10px 52px;
 color: var(--main-background-color);
-background: #2196F3;
+background: var(--accent-blue);
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border: none;
 border-radius: 4px;
 margin-top: 30px;
+
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 display:flex;
 align-items: center;
 margin-left: auto;
 margin-right: auto;
 }
+
+.modal-button:hover,
+.modal-button:focus {
+background-color: #188CE8;
+}
 .label-checkbox {
-  
+ 
 }
 .terms {
   color: var(--accent-blue);
@@ -816,7 +845,20 @@ margin-right: auto;
 }
 
 .checkbox-icon {
- background-color: #FFFFFF;
+  position: absolute;
+
+  width: 16px;
+  height: 15px;
+ background: #FFFFFF;
+ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+ border: 2px solid var(--secondary-text-color);
+ border-radius: 4px;
+ margin-right: 24px;
+
+ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox:focus ~ .checkbox-icon {
+  background-color: #2196F3;
 }
 /*-----------PORTFOLIO--------*/
 /*-----------PORTFOLIO_ABOUT--------*/
