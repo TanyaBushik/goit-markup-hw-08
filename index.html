@@ -380,36 +380,29 @@
                <form action="">
 
                 <div class="modal-input-group">
-                       <label>Ім'я
-                        <input type="text" class="modal-input" name="name" placeholder=" ">
-                       <span class="modal-icon-person">
-                       <svg width="18" height="18">
+                       <label for="name">Ім'я</label>
+                        <input type="text" class="modal-input" name="name" id="name" placeholder=" ">
+                       <svg class="modal-icon-input" width="18" height="18">
                         <use href="./img/icons.svg#icon-person-img"></use>
                     </svg>
-                    </span>
-                    </label>
             </div>
 
                 <div class="modal-input-group">
-                    <label>Телефон
-                     <input type="tel" class="modal-input" name="tel" placeholder=" "
+                    <label for="tel">Телефон</label>
+                     <input type="tel" class="modal-input" name="tel" id="tel" placeholder=" "
                  pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}">
-                    <span class="modal-icon-phone">
-                       <svg width="18" height="18">
+
+                       <svg class="modal-icon-input" width="18" height="18">
                         <use href="./img/icons.svg#icon-phone-img"></use>
                     </svg>
-                    </span>
-                    </label>
-                </div>
+                    </div>
 
                 <div class="modal-input-group">
                     <label>Пошта
                       <input type="email" class="modal-input" name="email" placeholder=" ">
-                     <span class="modal-icon-email">
-                       <svg width="18" height="18">
+                       <svg class="modal-icon-input" width="18" height="18">
                         <use href="./img/icons.svg#icon-email-img"></use>
                     </svg>
-                    </span>
                     </label>
             </div>
 
@@ -419,15 +412,12 @@
     </label>
     </div>
 
-    <label class="label-checkbox">
-      <input type="checkbox" name="agree" value="agree" class="checkbox">
-      <span class="checkbox-icon">
-                       <!--<svg width="16" height="15">
-                        <use href="./img/icons.svg#icon-icon-checkbox"></use>
-                    </svg> -->
-                    </span>
-     Погоджуюся з розсилкою та приймаю <a href="" class="terms">Умови договору</a>
+<div class="modal-input-group">
+     <input type="checkbox" id="agree" name="agree" value="agree" class="checkbox-input">
+    <label for="agree" class="label-checkbox">Погоджуюся з розсилкою та приймаю 
+        <a href="#" class="terms">Умови договору</a>
     </label>
+    </div>
 
                 <button type="submit" class="modal-button">Відправити</button>
 
