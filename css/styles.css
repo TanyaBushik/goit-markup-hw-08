@@ -633,16 +633,17 @@ margin-bottom: 20px;
 .footer-form-email {
   width: 358px;
   height: 50px;
+  color: rgba(255, 255, 255, 0.6);
  border: 1px solid rgba(255, 255, 255, 0.3);
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 border-radius: 4px;
 background-color: var(--hero-background-color);
 margin-right: 12px;
+padding-left: 16px;
 }
 
 .footer-form-email::placeholder {
 color: rgba(255, 255, 255, 0.6);
-padding-left: 16px;
 }
 .footer-btn {
   width: 200px;
@@ -661,7 +662,14 @@ padding-left: 16px;
   align-items: center;
 }
 
+.footer-btn:hover,
+.footer-btn:focus
+.footer-btn:active {
+background: #188CE8;
+}
+
 .footer-send-icon {
+  display: flex;
   margin-left: 10px;
   fill: var(--main-background-color);
 }
@@ -719,7 +727,8 @@ justify-content: center;
 
 transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-close-button:hover {
+.modal-close-button:hover,
+.modal-close-button:focus {
   fill: var(--accent-blue);
 }
 .modal-header {
@@ -731,7 +740,12 @@ letter-spacing: 0.03em;
 color: var(--secondary-text-color);
 margin-bottom: 12px;
 }
-
+.modal-label {
+  font-size: 12px;
+line-height: 1.16;
+letter-spacing: 0.01em;
+margin-bottom: 4px;
+}
 .modal-input {
   width: 100%;
   height: 40px;
@@ -750,17 +764,19 @@ margin-bottom: 12px;
 
 .modal-icon-input {
  position: absolute;
-  top: 55%;
+  top: 58%;
   left: 12px;
   transform: translateY(-50%);
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input:focus-within ~ .modal-icon-input {
+.modal-input:focus-within ~ .modal-icon-input,
+.modal-input:hover ~ .modal-icon-input {
 fill: var(--accent-blue);
 }
-.modal-input:focus-within {
+.modal-input:focus-within,
+.modal-input:hover {
   border: 1px solid var(--accent-blue);
   outline: none;
 }
@@ -769,7 +785,6 @@ fill: var(--accent-blue);
   color: rgba(117, 117, 117, 0.5);
 }
 .modal-input-group {
-display: block;
 position: relative;
 }
 .modal-text {
@@ -787,7 +802,8 @@ position: relative;
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-text:focus-within {
+.modal-text:focus-within,
+.modal-text:hover {
   border: 1px solid var(--accent-blue);
   outline: none;
 }
@@ -831,6 +847,7 @@ background-color: #188CE8;
 }
 label.label-checkbox {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .checkbox-input {
@@ -852,6 +869,7 @@ label.label-checkbox {
 }
 .terms {
   color: var(--accent-blue);
+  margin-left: 5px;
 }
 
 /*-----------PORTFOLIO--------*/
