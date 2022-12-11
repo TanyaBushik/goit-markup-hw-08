@@ -782,7 +782,6 @@ fill: var(--accent-blue);
 }
 .modal-input-group {
 position: relative;
-margin-bottom: 10px;
 }
 
 .modal-text {
@@ -791,7 +790,6 @@ margin-bottom: 10px;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
-  margin-bottom: 10px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
