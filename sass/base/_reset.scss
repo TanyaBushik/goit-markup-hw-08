@@ -1,0 +1,27 @@
+p, h1, h2, h3, h4, h5, h6 {
+margin: 0px;
+}
+
+ul,
+ol {
+margin: 0px;
+padding: 0px;
+}
+
+button {
+  cursor: pointer;
+}
+ img {
+display: block;
+  }
+
+ body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--main-background-color);
+  color: var(--primary-text-color);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+ }
