@@ -874,15 +874,6 @@ label.label-checkbox {
   margin-left: 5px;
 }
 
-/* secondary text color 212121 */
-/* primary text color 757575 */
-/* main background white FFFFFF */
-/* section background F5F4FA */
-/* accent blue 2196F3 */
-/* header + footer background 2F303A */
-/* h1 FFFFFF */
-/*-----------PORTFOLIO--------*/
-/*-----------PORTFOLIO_ABOUT--------*/
 .navidation-list {
   display: flex;
   justify-content: center;
@@ -919,7 +910,6 @@ label.label-checkbox {
   margin-bottom: 50px;
 }
 
-/*-----------PORTFOLIO_WORKS--------*/
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
@@ -996,4 +986,12 @@ label.label-checkbox {
   border-bottom: 1px solid #EEEEEE;
   border-right: 1px solid #EEEEEE;
   width: 370px;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/* secondary text color 212121 */
+/* primary text color 757575 */
+/* main background white FFFFFF */
+/* section background F5F4FA */
+/* accent blue 2196F3 */
+/* header + footer background 2F303A */
+/* h1 FFFFFF *//*# sourceMappingURL=main.css.map */
