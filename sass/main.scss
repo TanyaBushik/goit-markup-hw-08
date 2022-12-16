@@ -5,10 +5,11 @@
 
 @import './utils/vars';
 
-@import './components/containersection';
-
+@import './components/container';
+@import './components/section';
 
 @import './layout/header';
+@import './layout/logo';
 @import './layout/hero';
 @import './layout/about';
 @import './layout/work';

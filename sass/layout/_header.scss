@@ -7,26 +7,15 @@
   align-items: center;
 }
 
-.header-nav {
+.navigation {
   display: flex;
   align-items: center;
 }
 
-.header-logo {
-  margin-right: 93px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  color: var(--accent-blue);
-}
-
-.header-list {
+.navigation-list {
   display: flex;
-}
-
-.header-list .link {
+  
+   & .link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -37,15 +26,21 @@
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-list .item + .item {
+
+& .item + .item {
   margin-left: 50px;
+}
+
+ & .current {
+  color: var(--accent-blue);
+}
 }
 
 .item {
   position: relative;
 }
 
-.header-link.current::after {
+.navigation-link.current::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -56,17 +51,24 @@
   border-radius: 2px;
 }
 
-.header-contacts {
+.navigation-list .navigation-link:hover,
+.navigation-list .navigation-link:active,
+.navigation-list .navigation-link:focus {
+  color: var(--accent-blue);
+}
+
+
+.main-contacts {
   display: flex;
   margin-left: auto;
   align-items: center;
-}
-
-.header-contacts .item + .item {
+  
+   & .item + .item {
   margin-left: 50px;
 }
 
-.header-contacts .link {
+
+& .link {
   display: flex;
   align-items: center;
   padding-top: 32px;
@@ -77,32 +79,12 @@
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-accent {
-  color: var(--secondary-text-color);
-}
-
-.header-list .header-link:hover,
-.header-list .header-link:active,
-.header-list .header-link:focus {
+&__link:hover,
+&__link:focus {
   color: var(--accent-blue);
 }
 
-.header-list .current {
-  color: var(--accent-blue);
-}
-
-.header-email:hover,
-.header-email:focus {
-  color: var(--accent-blue);
-}
-
-.header-tel:hover,
-.header-tel:focus {
-  color: var(--accent-blue);
-}
-
-.header-email,
-.header-tel {
+&s__link {
   content: "";
   justify-content: center;
   align-items: center;
@@ -110,11 +92,12 @@
   color: var(--primary-text-color);
 }
 
-.header-icon:hover .header-icon:focus {
+&__icon:hover,
+&__icon:focus {
   color: var(--accent-blue);
 }
 
-.header-icon {
+&__icon {
   display: inline-flex;
   margin-right: 10px;
   fill: currentColor;
@@ -122,3 +105,6 @@
   justify-content: center;
   align-items: center;
 }
+}
+
+

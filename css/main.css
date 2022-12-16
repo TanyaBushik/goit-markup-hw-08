@@ -35,6 +35,13 @@ body {
   list-style: none;
 }
 
+.title {
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -58,15 +65,15 @@ body {
   --border-bottom: 1px solid #ECECEC;
 }
 
-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .container {
   width: 1200px;
   margin: 0px auto;
   padding: 0 15px;
+}
+
+section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .header {
@@ -78,26 +85,15 @@ section {
   align-items: center;
 }
 
-.header-nav {
+.navigation {
   display: flex;
   align-items: center;
 }
 
-.header-logo {
-  margin-right: 93px;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  color: var(--accent-blue);
-}
-
-.header-list {
+.navigation-list {
   display: flex;
 }
-
-.header-list .link {
+.navigation-list .link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -107,16 +103,18 @@ section {
   color: var(--secondary-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.header-list .item + .item {
+.navigation-list .item + .item {
   margin-left: 50px;
+}
+.navigation-list .current {
+  color: var(--accent-blue);
 }
 
 .item {
   position: relative;
 }
 
-.header-link.current::after {
+.navigation-link.current::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -127,17 +125,21 @@ section {
   border-radius: 2px;
 }
 
-.header-contacts {
+.navigation-list .navigation-link:hover,
+.navigation-list .navigation-link:active,
+.navigation-list .navigation-link:focus {
+  color: var(--accent-blue);
+}
+
+.main-contacts {
   display: flex;
   margin-left: auto;
   align-items: center;
 }
-
-.header-contacts .item + .item {
+.main-contacts .item + .item {
   margin-left: 50px;
 }
-
-.header-contacts .link {
+.main-contacts .link {
   display: flex;
   align-items: center;
   padding-top: 32px;
@@ -147,51 +149,39 @@ section {
   color: var(--primary-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.header-accent {
-  color: var(--secondary-text-color);
-}
-
-.header-list .header-link:hover,
-.header-list .header-link:active,
-.header-list .header-link:focus {
+.main-contacts__link:hover, .main-contacts__link:focus {
   color: var(--accent-blue);
 }
-
-.header-list .current {
-  color: var(--accent-blue);
-}
-
-.header-email:hover,
-.header-email:focus {
-  color: var(--accent-blue);
-}
-
-.header-tel:hover,
-.header-tel:focus {
-  color: var(--accent-blue);
-}
-
-.header-email,
-.header-tel {
+.main-contactss__link {
   content: "";
   justify-content: center;
   align-items: center;
   font-weight: 500;
   color: var(--primary-text-color);
 }
-
-.header-icon:hover .header-icon:focus {
+.main-contacts__icon:hover, .main-contacts__icon:focus {
   color: var(--accent-blue);
 }
-
-.header-icon {
+.main-contacts__icon {
   display: inline-flex;
   margin-right: 10px;
   fill: currentColor;
   align-content: center;
   justify-content: center;
   align-items: center;
+}
+
+.logo {
+  margin-right: 93px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: var(--accent-blue);
+}
+.logo__accent {
+  color: var(--secondary-text-color);
 }
 
 .hero-section {
@@ -209,12 +199,10 @@ section {
   max-width: 1600px;
   margin: 0 auto;
 }
-
-.hero-box {
+.hero-section__box {
   margin-bottom: var(--margin-between-items);
 }
-
-.hero-title {
+.hero-section__title {
   max-width: 696px;
   margin: 0 auto;
   font-weight: 900;
@@ -224,8 +212,7 @@ section {
   text-transform: uppercase;
   color: var(--main-background-color);
 }
-
-.hero-btn {
+.hero-section__btn {
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -241,27 +228,25 @@ section {
   margin-left: auto;
   margin-right: auto;
 }
-
-.hero-btn:hover,
-.hero-btn:focus .hero-btn:active {
+.hero-section__btn:hover, .hero-section__btn:focus .hero-section__btn:active {
   background: #188CE8;
 }
 
-.about-list {
+.fetures__list {
   display: flex;
 }
 
-.about-title {
+.fetures__title {
   margin-bottom: 10px;
   line-height: 1.14;
   color: var(--secondary-text-color);
 }
 
-.about-item:not(:last-child) {
+.fetures__item:not(:last-child) {
   margin-right: var(--margin-between-items);
 }
 
-.about-icon {
+.fetures__icon {
   display: flex;
   content: "";
   align-content: center;
@@ -271,22 +256,6 @@ section {
   background-color: var(--section-background-color);
   margin-bottom: 30px;
   border-radius: 4px;
-}
-
-.antena-icon {
-  width: 65px;
-}
-
-.clock-icon {
-  width: 67px;
-}
-
-.diagram-icon {
-  width: 70px;
-}
-
-.astronaut-icon {
-  width: 55px;
 }
 
 /*align-items: center;
@@ -323,33 +292,23 @@ background-image: url(../img/astronaut.svg);
   padding-top: 0px;
 }
 
-.work-list {
+.works__list {
   display: flex;
 }
 
-.work-item:not(:last-child) {
+.works__item:not(:last-child) {
   margin-right: var(--margin-between-items);
 }
 
-.work-title,
-.footer-title,
-.command-title,
-.client-title {
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  color: var(--secondary-text-color);
-}
-
-.work-title {
+.works__title {
   margin-bottom: 50px;
 }
 
-.work-item-wrap {
+.works__wrap {
   position: relative;
 }
 
-.work-item-text {
+.works__text {
   position: absolute;
   bottom: 0;
   width: 370px;
@@ -367,34 +326,28 @@ background-image: url(../img/astronaut.svg);
   background-color: rgba(47, 48, 58, 0.8);
 }
 
-.command-section {
+.command {
   background-color: var(--section-background-color);
 }
-
-.command-img {
+.command__img {
   background: url(4853.jpg);
   border-radius: 0px;
 }
-
-.command-title {
+.command__title {
   margin-bottom: 50px;
 }
-
-.command-list {
+.command__list {
   display: flex;
 }
-
-.command-item {
+.command__item {
   background: var(--main-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-
-.command-item:not(:last-child) {
+.command__item:not(:last-child) {
   margin-right: var(--margin-between-items);
 }
-
-.command-name {
+.command__name {
   margin-bottom: 10px;
   padding-top: var(--margin-between-items);
   font-weight: 500;
@@ -403,30 +356,23 @@ background-image: url(../img/astronaut.svg);
   text-align: center;
   color: var(--secondary-text-color);
 }
-
-.command-position {
+.command__position {
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
 }
 
-.command-soc-list {
+.soc-list {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 20px 24px;
 }
-
-.command-soc-item {
+.soc-list__item {
   width: 44px;
   height: 44px;
 }
-
-.command-soc-item:not(:last-child) {
-  margin-right: 10px;
-}
-
-.command-soc-link {
+.soc-list__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -436,26 +382,24 @@ background-image: url(../img/astronaut.svg);
   color: #afb1b8;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.command-soc-link:hover {
+.soc-list__link:hover {
   background-color: var(--accent-blue);
   color: var(--main-background-color);
 }
-
-.command-soc-icons {
+.soc-list__icons {
   fill: currentColor;
 }
 
-.client-title {
+.clients__title {
   margin-bottom: 50px;
 }
 
-.client-list {
+.clients__list {
   display: flex;
   justify-content: center;
 }
 
-.client-link {
+.clients__link {
   display: flex;
   max-width: 100%;
   height: 100%;
@@ -467,23 +411,23 @@ background-image: url(../img/astronaut.svg);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client-item {
+.clients__item {
   width: 170px;
   height: 92px;
 }
 
-.client-icon {
+.clients__icon {
   color: var(--primary-text-color);
 }
 
-.client-item:not(:last-child) {
+.clients__item:not(:last-child) {
   margin-right: var(--margin-between-items);
 }
 
-.client-item:focus,
-.client-item:hover,
-.client-link:focus,
-.client-link:hover {
+.clients__item:focus,
+.clients__item:hover,
+.clients__link:focus,
+.clients__link:hover {
   fill: var(--accent-blue);
   border-color: var(--accent-blue);
 }

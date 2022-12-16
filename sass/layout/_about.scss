@@ -1,18 +1,18 @@
-.about-list {
+.fetures__list {
 display: flex;
 }
 
-.about-title {
+.fetures__title {
 margin-bottom: 10px;
 
 line-height: 1.14;
 color: var(--secondary-text-color);
 }
 
-.about-item:not(:last-child) {
+.fetures__item:not(:last-child) {
 margin-right: var(--margin-between-items);
 }
-.about-icon {
+.fetures__icon {
  display: flex;
  content: "";
  align-content: center;
@@ -22,19 +22,6 @@ margin-right: var(--margin-between-items);
  background-color: var(--section-background-color);
  margin-bottom: 30px;
  border-radius: 4px;
-}
-
-.antena-icon {
-  width: 65px;
-}
-.clock-icon {
-width: 67px;
-}
-.diagram-icon {
-width: 70px;
-}
-.astronaut-icon {
-width: 55px;
 }
 
 /*align-items: center;

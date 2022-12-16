@@ -1,28 +1,29 @@
-.command-section {
+.command {
 background-color: var(--section-background-color);
-}
-.command-img {
+
+&__img {
 background: url(4853.jpg);
 border-radius: 0px;
 }
-.command-title{
+
+&__title{
   margin-bottom: 50px;
 }
 
-.command-list {
+&__list {
   display: flex;
 }
 
-.command-item {
+&__item {
 background: var(--main-background-color);
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 0px 0px 4px 4px;
 }
-
-.command-item:not(:last-child) {
+&__item:not(:last-child) {
 margin-right: var(--margin-between-items);
 }
-.command-name {
+
+&__name {
 margin-bottom: 10px;
 padding-top: var(--margin-between-items);
 
@@ -33,27 +34,27 @@ text-align: center;
 color: var(--secondary-text-color);
 
 }
-
-.command-position {
+&__position {
 font-size: 16px;
 line-height: 1.18;
 text-align: center;
 }
-.command-soc-list {
+
+}
+
+
+.soc-list {
   display: flex;
   justify-content: center;
   align-items: center;
  margin: 20px 24px; 
-}
-
-.command-soc-item {
+ 
+ &__item {
   width: 44px;
   height: 44px;
 }
-.command-soc-item:not(:last-child) {
-margin-right: 10px;
-}
-.command-soc-link {
+
+&__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,11 +67,15 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
 color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.command-soc-link:hover {
+&__link:hover {
   background-color: var(--accent-blue);
   color: var(--main-background-color);
 }
 
-.command-soc-icons {
+
+&__icons {
   fill: currentColor;
 }
+
+}
+
