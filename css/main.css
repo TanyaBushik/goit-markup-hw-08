@@ -104,6 +104,10 @@ section {
 .navigation__list {
   display: flex;
 }
+.navigation__list--current {
+  color: var(--accent-blue);
+}
+
 .navigation__list .link {
   display: block;
   padding-top: 32px;
@@ -114,11 +118,9 @@ section {
   color: var(--secondary-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .navigation__list .item + .item {
   margin-left: 50px;
-}
-.navigation__list--current {
-  color: var(--accent-blue);
 }
 
 .item {
@@ -150,6 +152,7 @@ section {
 .header__contacts .item + .item {
   margin-left: 50px;
 }
+
 .header__contacts .link {
   display: flex;
   align-items: center;
@@ -160,6 +163,7 @@ section {
   color: var(--primary-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .header__contacts__link {
   content: "";
   justify-content: center;
@@ -169,10 +173,7 @@ section {
 }
 
 .contacts__link:hover,
-.contacts__link:focus {
-  color: var(--accent-blue);
-}
-
+.contacts__link:focus,
 .contacts__icon:hover,
 .contacts__icon:focus {
   color: var(--accent-blue);
@@ -223,23 +224,29 @@ section {
   max-width: 1600px;
   margin: 0 auto;
 }
+.hero-section__btn:hover, .hero-section__btn:focus .hero-section__btn:active {
+  background: #188CE8;
+}
+
 .hero-section__box {
   margin-bottom: var(--margin-between-items);
 }
+
 .hero-section__title {
   max-width: 696px;
   margin: 0 auto;
-  font-weight: 900;
   font-size: 44px;
+  font-weight: 900;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--main-background-color);
 }
+
 .hero-section__btn {
   font-family: inherit;
-  font-weight: 700;
   font-size: 16px;
+  font-weight: 700;
   line-height: 1.87;
   letter-spacing: 0.06em;
   color: var(--main-background-color);
@@ -251,9 +258,6 @@ section {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-.hero-section__btn:hover, .hero-section__btn:focus .hero-section__btn:active {
-  background: #188CE8;
 }
 
 .fetures__list {
@@ -347,24 +351,29 @@ background-image: url(../img/astronaut.svg);
 .command {
   background-color: var(--section-background-color);
 }
+.command__item:not(:last-child) {
+  margin-right: var(--margin-between-items);
+}
+
 .command__img {
   background: url(4853.jpg);
   border-radius: 0px;
 }
+
 .command__title {
   margin-bottom: 50px;
 }
+
 .command__list {
   display: flex;
 }
+
 .command__item {
   background: var(--main-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.command__item:not(:last-child) {
-  margin-right: var(--margin-between-items);
-}
+
 .command__name {
   margin-bottom: 10px;
   padding-top: var(--margin-between-items);
@@ -375,19 +384,26 @@ background-image: url(../img/astronaut.svg);
   text-align: center;
   color: var(--secondary-text-color);
 }
+
 .command__position {
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
 }
+
 .command__socials {
   margin: 20px 24px;
+}
+
+.socials__icons {
+  fill: currentColor;
 }
 
 .socials__item {
   width: 44px;
   height: 44px;
 }
+
 .socials__link {
   width: 100%;
   height: 100%;
@@ -398,9 +414,6 @@ background-image: url(../img/astronaut.svg);
 .socials__link:hover {
   background-color: var(--accent-blue);
   color: var(--main-background-color);
-}
-.socials__icons {
-  fill: currentColor;
 }
 
 .clients__title {
@@ -425,13 +438,12 @@ background-image: url(../img/astronaut.svg);
   width: 170px;
   height: 92px;
 }
+.clients__item:not(:last-child) {
+  margin-right: var(--margin-between-items);
+}
 
 .clients__icon {
   color: var(--primary-text-color);
-}
-
-.clients__item:not(:last-child) {
-  margin-right: var(--margin-between-items);
 }
 
 .clients__item:focus,
@@ -513,18 +525,6 @@ background-image: url(../img/astronaut.svg);
 .form {
   display: flex;
 }
-.form__email::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-.form__email:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-.form__email::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-.form__btn:hover, .form__btn:focus .form__btn:active {
-  background: #188ce8;
-}
 
 .form__email {
   width: 358px;
@@ -536,6 +536,15 @@ background-image: url(../img/astronaut.svg);
   background-color: var(--hero-background-color);
   margin-right: 12px;
   padding-left: 16px;
+}
+.form__email::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.form__email:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.form__email::placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .form__btn {
@@ -551,6 +560,9 @@ background-image: url(../img/astronaut.svg);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 4px;
   border: none;
+}
+.form__btn:hover, .form__btn:focus, .form__btn:active {
+  background: #188ce8;
 }
 
 .form__icon {
@@ -613,10 +625,12 @@ background-image: url(../img/astronaut.svg);
   border-radius: 50%;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.modal__button--close:hover,
-.modal__button--close:focus {
+.modal__button--close:hover, .modal__button--close:focus {
   fill: var(--accent-blue);
+}
+
+.modal__group {
+  position: relative;
 }
 
 .modal__group:nth-child(-n+3) {
@@ -649,6 +663,10 @@ background-image: url(../img/astronaut.svg);
   color: var(--primary-text-color);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal__input:focus-within, .modal__input:hover {
+  border: 1px solid var(--accent-blue);
+  outline: none;
+}
 
 .modal__icon {
   position: absolute;
@@ -659,12 +677,6 @@ background-image: url(../img/astronaut.svg);
 .modal__input:focus-within ~ .modal__icon,
 .modal__input:hover ~ .modal__icon {
   fill: var(--accent-blue);
-}
-
-.modal__input:focus-within,
-.modal__input:hover {
-  border: 1px solid var(--accent-blue);
-  outline: none;
 }
 
 .modal__text::-moz-placeholder {
@@ -679,8 +691,14 @@ background-image: url(../img/astronaut.svg);
   color: rgba(117, 117, 117, 0.5);
 }
 
-.modal__group {
-  position: relative;
+.modal__text::before {
+  content: "";
+  width: 16px;
+  height: 15px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--secondary-text-color);
+  border-radius: 4px;
+  margin-right: 8px;
 }
 
 .modal__textarea {
@@ -727,16 +745,6 @@ background-image: url(../img/astronaut.svg);
   background-color: #188ce8;
 }
 
-.modal__text::before {
-  content: "";
-  width: 16px;
-  height: 15px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border: 2px solid var(--secondary-text-color);
-  border-radius: 4px;
-  margin-right: 8px;
-}
-
 .modal__checkbox {
   position: absolute;
   width: 1px;
@@ -768,11 +776,6 @@ background-image: url(../img/astronaut.svg);
 .menu .menu__item + .menu__item {
   margin-left: 8px;
 }
-.menu__btn:hover, .menu__btn:focus, .menu__btn:active {
-  background-color: var(--accent-blue);
-  color: var(--section-background-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
 
 .menu__btn {
   padding: 6px 22px;
@@ -787,6 +790,11 @@ background-image: url(../img/astronaut.svg);
   border-radius: 4px;
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu__btn:hover, .menu__btn:focus, .menu__btn:active {
+  background-color: var(--accent-blue);
+  color: var(--section-background-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .cards-list {

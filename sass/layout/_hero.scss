@@ -15,29 +15,29 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 max-width: 1600px;
 margin: 0 auto;
 
-&__box {
+&__btn:hover,
+&__btn:focus
+&__btn:active {
+background: #188CE8;
+}
+}
+
+.hero-section__box {
 margin-bottom: var(--margin-between-items);
 }
 
-
-&__title {
+.hero-section__title {
 max-width: 696px;
 margin: 0 auto;
 
-font-weight: 900;
-font-size: 44px;
-line-height: 1.36;
-letter-spacing: 0.06em;
+ @include font(44, 900, 1.36, 0.06);
 text-transform: uppercase;
 color: var(--main-background-color);
 }
-
-&__btn {
+.hero-section__btn {
 font-family: inherit;
-font-weight: 700;
-font-size: 16px;
-line-height: 1.87;
-letter-spacing: 0.06em;
+@include font(16, 700, 1.87, 0.06);
+
 color: var(--main-background-color);
 background-color: var(--accent-blue);
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -49,11 +49,3 @@ display:block;
 margin-left: auto;
 margin-right: auto;
 }
-
-&__btn:hover,
-&__btn:focus
-&__btn:active {
-background: #188CE8;
-}
-}
-

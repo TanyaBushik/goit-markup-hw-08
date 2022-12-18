@@ -19,13 +19,15 @@
 .clients__item {
   width: 170px;
   height: 92px;
+
+  &:not(:last-child) {
+  margin-right: var(--margin-between-items);
+}
 }
 .clients__icon {
   color: var(--primary-text-color);
 }
-.clients__item:not(:last-child) {
-  margin-right: var(--margin-between-items);
-}
+
 
 .clients__item:focus,
 .clients__item:hover,
