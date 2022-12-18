@@ -1,28 +1,37 @@
 .backdrop {
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 
-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%) scaleY(1) rotate(0);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleY(1) rotate(0);
 
-width: 528px;
-min-height: 581px;
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 4px;
-background-color: var(--main-background-color);
-padding: 40px;
+  width: 528px;
+  min-height: 581px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-color: var(--main-background-color);
+  padding: 40px;
 
-transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &__header {
+  @include font(20, 700, 1.51 0.03);
+
+  text-align: center;
+  color: var(--secondary-text-color);
+  margin-bottom: 12px;
+}
 }
 
 .backdrop.is-hidden {
@@ -31,35 +40,27 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
 }
 .is-hidden .modal {
-transform: translate(-50%, -50%) scaleY(0) rotate(-180deg);
+  transform: translate(-50%, -50%) scaleY(0) rotate(-180deg);
 }
 
 .modal__button--close {
-position: absolute;
-right: 8px;
-top: 8px;
-background: var(--main-background-color);
-border: 1px solid rgba(0, 0, 0, 0.1);
-width: 30px;
-height: 30px;
-border-radius: 50%;
-@extend  %flex-align-justify;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background: var(--main-background-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  @extend %flex-align-justify;
 
-transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal__button--close:hover,
 .modal__button--close:focus {
   fill: var(--accent-blue);
 }
-.modal__header {
-font-weight: 700;
-font-size: 20px;
-line-height: 1.15;
-text-align: center;
-letter-spacing: 0.03em;
-color: var(--secondary-text-color);
-margin-bottom: 12px;
-}
+
 .modal__group:nth-child(-n + 3) {
   margin-bottom: 10px;
 }
@@ -67,16 +68,16 @@ margin-bottom: 12px;
   margin-top: 20px;
 }
 .modal__label {
-  @include font ($fs:12, $lh:1.16, $ls:0.01);
+  @include font($fs: 12, $lh: 1.16, $ls: 0.01);
 
-margin-bottom: 4px;
+  margin-bottom: 4px;
 }
 .modal__input {
   width: 100%;
   height: 40px;
 
-  @include font ($fs:12, $lh:1.16, $ls:0.01);
- 
+  @include font($fs: 12, $lh: 1.16, $ls: 0.01);
+
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   cursor: pointer;
@@ -87,14 +88,14 @@ margin-bottom: 4px;
 }
 
 .modal__icon {
- position: absolute;
+  position: absolute;
   top: 55%;
   left: 15px;
 }
 
 .modal__input:focus-within ~ .modal__icon,
 .modal__input:hover ~ .modal__icon {
-fill: var(--accent-blue);
+  fill: var(--accent-blue);
 }
 .modal__input:focus-within,
 .modal__input:hover {
@@ -102,19 +103,19 @@ fill: var(--accent-blue);
   outline: none;
 }
 
-.modal-text::placeholder {
+.modal__text::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 .modal__group {
-position: relative;
+  position: relative;
 }
 
 .modal__textarea {
- width: 448px;
+  width: 448px;
   height: 120px;
 
-  @include font ($fs:12, $lh:1.16, $ls:0.01);
-  
+  @include font($fs: 12, $lh: 1.16, $ls: 0.01);
+
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
@@ -122,51 +123,57 @@ position: relative;
   cursor: pointer;
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal__textarea:focus-within,
-.modal__textarea:hover {
+
+  &:focus-within,
+  &:hover {
   border: 1px solid var(--accent-blue);
   outline: none;
 }
+}
+
 .modal__button {
-width: 200px;
-font-family: inherit;;
-font-style: normal;
+  width: 200px;
+  font-family: inherit;
+  font-style: normal;
 
-@include font (16, 700, 1.88, 0.06);
+  @include font(16, 700, 1.88, 0.06);
 
-padding: 10px 52px;
-color: var(--main-background-color);
-background: var(--accent-blue);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-border: none;
-border-radius: 4px;
-margin-top: 30px;
+  padding: 10px 52px;
+  color: var(--main-background-color);
+  background: var(--accent-blue);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+  margin-top: 30px;
 
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-display:flex;
-align-items: center;
-margin-left: auto;
-margin-right: auto;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:hover,
+  &:focus {
+  background-color: #188ce8;
+}
 }
 
-.modal__button:hover,
-.modal__button:focus {
-background-color: #188CE8;
-}
+
 
 .modal__text::before {
- content: "";
- width: 16px;
- height: 15px;
- box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
- border: 2px solid var(--secondary-text-color);
- border-radius: 4px;
- margin-right: 8px;
+  content: "";
+  width: 16px;
+  height: 15px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--secondary-text-color);
+  border-radius: 4px;
+  margin-right: 8px;
 }
-label.modal__text {
-  @extend  %flex-align-justify;
+
+  label.modal__text {
+  @extend %flex-align-justify;
 }
 .modal__checkbox {
   position: absolute;
