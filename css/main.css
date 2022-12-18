@@ -76,6 +76,23 @@ label.modal__text, .modal__button--close, .form__btn, .clients__link, .socials__
   justify-content: center;
 }
 
+/*
+%transition-transform {
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
+}
+%transition-fill {
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
+}
+
+%transition-border-color {
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
+}*/
 .container {
   width: 1200px;
   margin: 0px auto;
