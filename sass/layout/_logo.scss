@@ -1,12 +1,17 @@
 .logo {
-  margin-right: 93px;
   font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
+
+  @include font (26, 700, 1.2, 0.03);
+ 
   color: var(--accent-blue);
-  &__accent {
+}
+
+.logo__accent--dark {
   color: var(--secondary-text-color);
 }
+.logo__accent--light {
+  color: var(--main-background-color);
+}
+.navigation__logo {
+  margin-right: 93px;
 }

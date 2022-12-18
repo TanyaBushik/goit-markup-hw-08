@@ -31,9 +31,10 @@ margin-bottom: 0;
   position: absolute;
   top: 0;
   padding: 63px 24px;
+
+  @include font ($fs:18, $lh:1.56);
   height: 100%;
-  font-size: 18px;
-  line-height: 1.56;
+  
   color: var(--main-background-color);
   background-color: var(--accent-blue);
 
