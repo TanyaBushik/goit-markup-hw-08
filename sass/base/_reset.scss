@@ -12,8 +12,10 @@ button {
   cursor: pointer;
 }
  img {
-display: block;
-  }
+  display: block;
+  width: 100%;
+  height: auto;
+ }
 
  body {
   font-family: "Roboto", sans-serif;

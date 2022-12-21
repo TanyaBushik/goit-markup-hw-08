@@ -14,6 +14,8 @@ button {
 
 img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 body {
@@ -45,6 +47,18 @@ footer {
   line-height: 1.16;
   text-align: center;
   color: var(--secondary-text-color);
+}
+@media screen and (min-width: 480px) {
+  .title {
+    font-size: 28px;
+    line-height: 1.17;
+  }
+}
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 28px;
+    line-height: 1.17;
+  }
 }
 
 .visually-hidden {
@@ -94,14 +108,48 @@ label.modal__text, .modal__button--close, .form__btn, .clients__link, .socials__
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
 }*/
 .container {
-  width: 1200px;
+  width: 100%;
   margin: 0px auto;
   padding: 0 15px;
 }
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
 
 section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 480px) {
+  section {
+    width: 480px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  section {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section {
+    width: 1200px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .header {
@@ -368,8 +416,40 @@ background-image: url(../img/astronaut.svg);
 .command {
   background-color: var(--section-background-color);
 }
-.command__item:not(:last-child) {
-  margin-right: var(--margin-between-items);
+
+.command__list {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .command__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .command__list {
+    flex-wrap: nowrap;
+  }
+}
+
+.command__item {
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .command__item {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+  .command__item:nth-child(-n+2) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .command__item:not(:last-child) {
+    margin-right: var(--margin-between-items);
+    margin-bottom: 0;
+  }
 }
 
 .command__img {
@@ -378,11 +458,15 @@ background-image: url(../img/astronaut.svg);
 }
 
 .command__title {
-  margin-bottom: 50px;
+  font-size: 28px;
+  line-height: 1.17;
+  margin-bottom: 30px;
 }
-
-.command__list {
-  display: flex;
+@media screen and (min-width: 1200px) {
+  .command__title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .command__item {
