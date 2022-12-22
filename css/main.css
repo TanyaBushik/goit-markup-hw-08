@@ -131,12 +131,12 @@ label.modal__text, .modal__button--close, .form__btn, .clients__link, .socials__
 section {
   padding-top: 60px;
   padding-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 480px) {
   section {
     width: 480px;
-    padding-top: 60px;
-    padding-bottom: 60px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -325,8 +325,17 @@ section {
   margin-right: auto;
 }
 
-.fetures__list {
-  display: flex;
+@media screen and (min-width: 768px) {
+  .fetures__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fetures__list {
+    flex-wrap: nowrap;
+  }
 }
 
 .fetures__title {
@@ -335,17 +344,38 @@ section {
   color: var(--secondary-text-color);
 }
 
+.fetures__item {
+  margin-left: auto;
+  margin-right: auto;
+}
 .fetures__item:not(:last-child) {
-  margin-right: var(--margin-between-items);
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .fetures__item {
+    width: 270px;
+  }
+  .fetures__item:nth-child(-n+2) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fetures__item:not(:last-child) {
+    margin-right: var(--margin-between-items);
+    margin-bottom: 0;
+  }
 }
 
 .fetures__icon {
   content: "";
-  width: 270px;
   height: 120px;
   background-color: var(--section-background-color);
   margin-bottom: 30px;
   border-radius: 4px;
+}
+.fetures__text {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /*align-items: center;
@@ -380,6 +410,12 @@ background-image: url(../img/astronaut.svg);
 }*/
 .no-padding {
   padding-top: 0px;
+}
+@media screen and (max-width: 1199px) {
+  .no-padding {
+    visibility: hidden;
+    display: none;
+  }
 }
 
 .works__list {
@@ -518,12 +554,18 @@ background-image: url(../img/astronaut.svg);
 }
 
 .clients__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .clients__list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .clients__list {
+    flex-wrap: nowrap;
+  }
 }
 
 .clients__link {
@@ -536,11 +578,36 @@ background-image: url(../img/astronaut.svg);
 }
 
 .clients__item {
-  width: 170px;
+  width: 210px;
   height: 92px;
 }
-.clients__item:not(:last-child) {
-  margin-right: var(--margin-between-items);
+.clients__item:nth-child(-n+4) {
+  margin-bottom: 30px;
+}
+.clients__item:nth-child(2n+1) {
+  margin-right: 30px;
+}
+@media screen and (min-width: 768px) {
+  .clients__item {
+    flex-basis: calc((100% - 90px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .clients__item:nth-child(n+3) {
+    margin-bottom: 0;
+  }
+  .clients__item:nth-child(3n) {
+    margin-right: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    width: 170px;
+  }
+  .clients__item:not(:last-child) {
+    margin-right: var(--margin-between-items);
+    margin-bottom: 0;
+  }
 }
 
 .clients__icon {

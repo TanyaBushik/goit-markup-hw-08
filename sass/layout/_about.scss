@@ -1,5 +1,14 @@
 .fetures__list {
-  display: flex;
+
+   @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+  @media screen and (min-width: 1200px){
+    flex-wrap: nowrap;
+}
 }
 
 .fetures__title {
@@ -9,20 +18,47 @@
   color: var(--secondary-text-color);
 }
 
-.fetures__item:not(:last-child) {
-  margin-right: var(--margin-between-items);
+.fetures__item {
+margin-left: auto;
+margin-right: auto;
+ &:not(:last-child) {
+  margin-bottom: 30px;
+ }
+
+  @media screen and (min-width: 768px){
+      width: 270px;
+
+    &:nth-child(-n + 2) {
+     margin-bottom: 30px;
+    }
 }
+
+  @media screen and (min-width: 1200px){
+      &:not(:last-child) {
+    margin-right: var(--margin-between-items);
+     margin-bottom: 0;
+  }
+  }
+}
+
 .fetures__icon {
   @extend %flex-align-justify;
 
   content: "";
-  width: 270px;
   height: 120px;
   background-color: var(--section-background-color);
   margin-bottom: 30px;
   border-radius: 4px;
+
+   @media screen and (min-width: 768px){
+
+}
 }
 
+.fetures__text {
+  margin-right: auto;
+  margin-left: auto;
+}
 /*align-items: center;
   justify-content: center;
 
