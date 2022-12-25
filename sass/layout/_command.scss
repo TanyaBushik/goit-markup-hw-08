@@ -26,6 +26,7 @@ display: block;
     &:nth-child(-n + 2) {
        margin-bottom: 30px;
     }
+    }
 
       @media screen and (min-width: 1200px) {
       &:not(:last-child) {
@@ -33,7 +34,7 @@ display: block;
     margin-bottom: 0;
   }
   }
-}
+
 }
 
 .command__img {

@@ -1,13 +1,33 @@
 .footer {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
 
   &__wrap {
     display: inline-block;
+    padding-right: 124px;
+    padding-left: 124px;
+    text-align: center;
+    margin-bottom: 60px;
+
+
+  @media screen and (min-width: 768px) {
+      padding-right: 0;
+      padding-left: 61px;
+     }
+
+  @media screen and (min-width: 1200px) {
     flex-direction: column;
-    max-width: 240px;
     margin-left: 0;
     margin-right: 70px;
+    text-align: start;
+    margin-bottom: 0;
+    padding-left: 0;
+     }
   }
 }
 
@@ -37,6 +57,24 @@
   margin-bottom: 9px;
 }
 
+.footer-socials {
+   text-align: center;
+    padding-right: 137px;
+    padding-left: 137px;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 768px) {
+      padding-right: 89px;
+      padding-left: 0;
+      margin-left: 167px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding-right: 0;
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+}
 
 .footer-socials__text {
   @include font(14, 700, 1.14, 0.03);
@@ -60,19 +98,37 @@
 }
 
 .sign-up {
-  margin-left: 93px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+   @media screen and (min-width: 1200px) {
+     margin-left: 93px;
+     margin-right: 0;
+     text-align: start;
+     padding-left: 0;
+     padding-right: 0;
+     }
 
   &__title {
-    @include font($fw: 700, $lh: 1.14);
+  @include font($fw: 700, $lh: 1.14);
 
+    text-align: center;
     text-transform: uppercase;
     color: var(--main-background-color);
     margin-bottom: 20px;
+
+ 
   }
 }
 
 .form {
-  display: flex;
+
+  @media screen and (min-width: 1200px) {
+     display: flex;
+   }
+ 
 }
 
  .form__email {
@@ -85,6 +141,12 @@
     background-color: var(--hero-background-color);
     margin-right: 12px;
     padding-left: 16px;
+
+    margin-bottom: 20px;
+
+     @media screen and (min-width: 1200px) {
+      margin-bottom: 0;
+     }
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.6);

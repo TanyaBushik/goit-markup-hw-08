@@ -41,18 +41,36 @@
     <use href="./img/icons.svg#icon-telephone"></use>
  </svg>+38 096 111 11 11</a></li>
      </ul>
+     <button 
+           type="button" 
+           class="menu-button is-open" 
+           aria-expanded="false"
+           aria-controls="menu-page"
+           data-menu-button>
+        <svg 
+        width="40" height="40"
+        aria-label="Menu switcher">
+            <use class="icon-cross" href="./img/icons.svg#cross"></use>
+            <use class="icon-menu" href="./img/icons.svg#menu" ></use>
+        </svg>
+     </button>
+
+     <div class="menu-page" id="menu-page" data-menu>
+     </div>
 </div>
-    </header> -->
+    </header> 
 
     <main>
 
     <!--Section-Hero-->
     <section class="section hero-section">
+        <div class="container">
             <div class="hero-section__box">
         <h1 class="hero-section__title">Ефективні рішення для вашого бізнесу</h1>
         </div>
         <button type="button" class="hero-section__btn" data-modal-open>Замовити послугу</button>
         </div>
+         </div>
     </section>
 
  <!--Section-About-->
@@ -309,8 +327,8 @@
 </section>
     </main>
 
-    <!-- -Footer
-    <footer>
+    <!-- -Footer-->
+     <footer>
         <div class="container footer">
         <div class="footer__wrap">
        <a href="" class="logo link">Web<span class="logo__accent--light">Studio</span>
@@ -366,8 +384,8 @@
                 </form>
        </div>
        </div>
-    </footer> -->
-    
+    </footer> 
+
 <!--MODAL-WINDOW-->
      <div class="backdrop is-hidden" data-modal>
             <div class="modal">
@@ -430,6 +448,8 @@
   AOS.init();
 </script>
 <script src="./js/modal.js">
+</script>
+<script src="./js/menu.js">
 </script>
 </body>
 
