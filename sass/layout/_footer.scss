@@ -132,20 +132,28 @@
 }
 
  .form__email {
-    width: 358px;
-    height: 50px;
+  width: 430px;
+   height: 50px;
     color: rgba(255, 255, 255, 0.6);
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background-color: var(--hero-background-color);
-    margin-right: 12px;
+    // margin-left: 15px;
+    // padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 16px;
-
     margin-bottom: 20px;
 
+     @media screen and (min-width: 768px) {
+       width: 450px;
+     }
+
      @media screen and (min-width: 1200px) {
+        width: 358px;
       margin-bottom: 0;
+      margin-right: 12px;
      }
 
   &::placeholder {

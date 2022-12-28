@@ -56,6 +56,9 @@
 }
 
 .navigation__link--current::after {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   content: "";
   position: absolute;
   width: 100%;
@@ -146,8 +149,8 @@
 }
 
 .menu-button {
-  display: inline-flex;
-  margin: 0;
+ display: inline-flex; 
+  margin-left: auto;
   padding: 0;
   border: none;
   background-color: transparent;
@@ -156,17 +159,99 @@
   display: none;
 }
 }
-.menu-button .icon-cross {
-  display: none;
+
+.mobile-menu {
+  position: fixed;
+ width: 100vw;
+ height: 100vh;
+ background-color: var(--main-background-color);
+ top: 0px;
+ left: 0px;
+ right: 0px;
+
 }
 
-.menu-button.is-open .icon-cross {
-  display: block;
+.menu-cross {
+  display: inline-flex;
+  border: none;
+  background-color: transparent;
+  padding-left: 436px;
+  padding-top: 21px;
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-blue);
+  }
 }
 
-.menu-button.is-open .icon-menu {
-  display: none;
+.mobile-nav {
+  padding-top: 48px;
+  padding-bottom: 302px;
+  padding-left: 40px;
 }
+
+.mobile-nav__list {
+}
+
+.mobile-nav__link {
+  @include font($fs: 40, $fw: 500, $ls: 0.02);
+  
+  color: var(--secondary-text-color);
+
+}
+.navigation__link--current {
+}
+
+.mob-contacts {
+   padding-left: 40px;
+   margin-bottom: 64px;
+}
+
+
+.mob-contacts__item {
+}
+.mob-contacts__link.tel {
+    font-weight: 500;
+font-size: 34px;
+line-height: 1.71;
+letter-spacing: 0.02em;
+color: var(--accent-blue);
+margin-bottom: 32px;
+}
+.mob-contacts__link.email {
+font-weight: 500;
+font-size: 24px;
+line-height: 1.16;
+letter-spacing: 0.02em;
+color: var(--primary-text-color);
+}
+.mob-soc-wrap {
+  margin-left: 40px;
+}
+.mob-soc-list {
+  display: flex;
+ 
+}
+.mob-soc-link {
+   @include font(18, 500, 1.22, 0.02);
+ color: var(--accent-blue);
+}
+
+.mob-soc-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+// .menu-button .icon-cross {
+//   display: none;
+// }
+
+// .menu-button.is-open .icon-cross {
+//   display: block;
+// }
+
+// .menu-button.is-open .icon-menu {
+//   display: none;
+// }
 
 // .menu-page {
 //   position: absolute;
