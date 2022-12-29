@@ -20,9 +20,15 @@
   }
 }
 
+.logo-footer {
+ @media screen and (min-width: 768px) {
+     margin-right: 0;
+  }
+}
 .logo__accent--dark {
   color: var(--secondary-text-color);
 }
 .logo__accent--light {
   color: var(--main-background-color);
+
 }
