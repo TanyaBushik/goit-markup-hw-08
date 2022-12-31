@@ -43,7 +43,8 @@
  }
 
 .cards-list__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 .cards-list__item:hover .cover-text {
   transform: translateY(0);
@@ -95,5 +96,17 @@
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
-  width: 370px;
+  width: 450px;
+  flex-grow: 1;
+
+  @media screen and (min-width: 768px) {
+     width: 354px;
+    &:nth-child(1) {
+      padding-bottom: 56px;
+    }
+}
+
+ @media screen and (min-width: 1200px) {
+     width: 370px;
+}
 }

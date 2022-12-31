@@ -169,11 +169,13 @@ color: var(--accent-blue);
  top: 0px;
  left: 0px;
  right: 0px;
+ transform: translateX(-100%);
 
   padding-bottom: 48px;
-
 }
-
+.mobile-menu.is-hidden {
+  transform: translateX(0);
+}
 .menu-cross {
   display: inline-flex;
   border: none;
