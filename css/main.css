@@ -1272,9 +1272,29 @@ background-image: url(../img/astronaut.svg);
   display: flex;
   flex-wrap: wrap;
 }
+.menu .menu__item + .menu__item {
+  margin-left: 8px;
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu {
+    margin-bottom: 50px;
+  }
+}
 
-.menu__item {
-  margin-right: 8px;
+.menu__item:nth-child(-n+3) {
+  margin-bottom: 15px;
+}
+.menu__item:nth-last-child(-n+2) {
+  margin-bottom: 45px;
+}
+.menu__item:nth-child(4) {
+  margin-left: 0;
 }
 
 .menu__btn {
@@ -1406,7 +1426,7 @@ background-image: url(../img/astronaut.svg);
   .cards-list__wrap {
     width: 354px;
   }
-  .cards-list__wrap:nth-child(1) {
+  .cards-list__wrap .cards-list__wrap:nth-child(1) {
     padding-bottom: 56px;
   }
 }
