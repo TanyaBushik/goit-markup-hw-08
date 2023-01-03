@@ -1,5 +1,9 @@
 .command {
   background-color: var(--section-background-color);
+
+  @media screen and (min-width: 1200px) {
+    width: 1600px;
+  }
 }
 
 .command__list {
@@ -17,11 +21,22 @@ display: block;
   }
 
 .command__item {
+      background: var(--main-background-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
   margin-right: auto;
   margin-left: auto;
+    &:not(:last-child) {
+  margin-bottom: 30px;
+ }
 
     @media screen and (min-width: 768px) {
     flex-basis: calc((100% - 60px) / 2);
+
+      &:not(:last-child) {
+  margin-bottom: 0px;
+ }
    
     &:nth-child(-n + 2) {
        margin-bottom: 30px;
@@ -42,7 +57,7 @@ display: block;
 .command__title {
    font-size: 28px;
    line-height: 1.17;
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 
    @media screen and (min-width: 768px){
   
@@ -53,12 +68,6 @@ display: block;
    }
   }
 
-.command__item {
-    background: var(--main-background-color);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
-  }
 .command__name {
     margin-bottom: 10px;
     padding-top: var(--margin-between-items);
@@ -72,9 +81,10 @@ display: block;
     font-size: 16px;
     line-height: 1.18;
     text-align: center;
+    margin-bottom: 16px;
   }
 .command__socials {
-  margin: 20px 24px;
+  padding-bottom: 24px;
 }
 
 .socials {

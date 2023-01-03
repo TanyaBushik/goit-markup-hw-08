@@ -4,11 +4,15 @@
 }
 
 .cards-list__item {
-  width: 450px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   &:not(:last-child) {
  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 480px) {
+  width: 450px;
 }
 
  @media screen and (min-width: 768px){
@@ -45,6 +49,7 @@
 .cards-list__link {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 .cards-list__item:hover .cover-text {
   transform: translateY(0);
@@ -97,7 +102,11 @@
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   flex-grow: 1;
+
 
   @media screen and (min-width: 768px) {
      width: 354px;

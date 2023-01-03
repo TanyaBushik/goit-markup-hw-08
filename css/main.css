@@ -31,7 +31,6 @@ body {
 
 footer {
   background-color: var(--hero-background-color);
-  padding: 60px 0;
 }
 
 .link {
@@ -108,7 +107,7 @@ label.modal__text, .modal__button--close, .form__btn, .clients__link, .socials__
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
 }*/
 .container {
-  width: 100vw;
+  width: 100%;
   margin: 0px auto;
   padding: 0 15px;
 }
@@ -128,24 +127,24 @@ label.modal__text, .modal__button--close, .form__btn, .clients__link, .socials__
   }
 }
 
-section {
+.section {
   padding-top: 60px;
   padding-bottom: 60px;
   margin-left: auto;
   margin-right: auto;
 }
 @media screen and (min-width: 480px) {
-  section {
+  .section {
     width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
-  section {
+  .section {
     width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
-  section {
+  .section {
     width: 1200px;
     padding-top: 94px;
     padding-bottom: 94px;
@@ -332,8 +331,9 @@ section {
   right: 0px;
   overflow-y: scroll;
   padding: 48px 0;
-  transform: translateX(100%);
+  transform: translateX(-100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 200;
 }
 
 .mobile-menu.is-open {
@@ -394,11 +394,6 @@ mobile-nav__link:hover {
   padding-left: 40px;
 }
 
-.mob-soc-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .mob-soc-link {
   font-size: 18px;
   font-weight: 500;
@@ -410,6 +405,11 @@ mobile-nav__link:hover {
 
 .mob-soc-list:last-child {
   padding-right: 0;
+}
+
+.mob-soc-list {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .mob-soc-item:not(:last-child) {
@@ -505,6 +505,7 @@ mobile-nav__link:hover {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero_img.jpg);
     padding-top: 200px;
     padding-bottom: 200px;
+    width: 1600px;
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
@@ -582,7 +583,10 @@ mobile-nav__link:hover {
 }
 @media screen and (min-width: 768px) {
   .fetures__item {
-    width: 270px;
+    flex-basis: calc((100% - 60px) / 2);
+  }
+  .fetures__item:not(:last-child) {
+    margin-bottom: 0px;
   }
   .fetures__item:nth-child(-n+2) {
     margin-bottom: 30px;
@@ -681,6 +685,11 @@ background-image: url(../img/astronaut.svg);
 .command {
   background-color: var(--section-background-color);
 }
+@media screen and (min-width: 1200px) {
+  .command {
+    width: 1600px;
+  }
+}
 
 .command__list {
   display: block;
@@ -699,12 +708,21 @@ background-image: url(../img/astronaut.svg);
 }
 
 .command__item {
+  background: var(--main-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
   margin-right: auto;
   margin-left: auto;
+}
+.command__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .command__item {
     flex-basis: calc((100% - 60px) / 2);
+  }
+  .command__item:not(:last-child) {
+    margin-bottom: 0px;
   }
   .command__item:nth-child(-n+2) {
     margin-bottom: 30px;
@@ -733,12 +751,6 @@ background-image: url(../img/astronaut.svg);
   }
 }
 
-.command__item {
-  background: var(--main-background-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-
 .command__name {
   margin-bottom: 10px;
   padding-top: var(--margin-between-items);
@@ -754,10 +766,11 @@ background-image: url(../img/astronaut.svg);
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
+  margin-bottom: 16px;
 }
 
 .command__socials {
-  margin: 20px 24px;
+  padding-bottom: 24px;
 }
 
 .socials__icons {
@@ -865,31 +878,38 @@ background-image: url(../img/astronaut.svg);
   border-color: var(--accent-blue);
 }
 
-.footer {
+.footer-container {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
+  width: 430px;
+}
+@media screen and (min-width: 768px) {
+  .footer-container {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 1200px) {
-  .footer {
+  .footer-container {
     flex-wrap: nowrap;
   }
 }
-.footer__wrap {
-  display: inline-block;
-  padding-right: 124px;
-  padding-left: 124px;
+
+.footer-container__wrap {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
-  .footer__wrap {
+  .footer-container__wrap {
     padding-right: 0;
     padding-left: 61px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .footer__wrap {
+  .footer-container__wrap {
     flex-direction: column;
     margin-left: 0;
     margin-right: 70px;
@@ -921,8 +941,8 @@ background-image: url(../img/astronaut.svg);
 
 .footer-socials {
   text-align: center;
-  padding-right: 137px;
-  padding-left: 137px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
@@ -934,6 +954,8 @@ background-image: url(../img/astronaut.svg);
 }
 @media screen and (min-width: 1200px) {
   .footer-socials {
+    display: block;
+    text-align: start;
     padding-right: 0;
     margin-left: 0;
     margin-bottom: 0;
@@ -964,8 +986,6 @@ background-image: url(../img/astronaut.svg);
 }
 
 .sign-up {
-  padding-left: 15px;
-  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -988,7 +1008,16 @@ background-image: url(../img/astronaut.svg);
   color: var(--main-background-color);
   margin-bottom: 20px;
 }
+@media screen and (min-width: 1200px) {
+  .sign-up__title {
+    text-align: start;
+  }
+}
 
+.form {
+  margin-left: auto;
+  margin-right: auto;
+}
 @media screen and (min-width: 1200px) {
   .form {
     display: flex;
@@ -996,17 +1025,22 @@ background-image: url(../img/astronaut.svg);
 }
 
 .form__email {
-  width: 430px;
+  width: 100%;
   height: 50px;
   color: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: var(--hero-background-color);
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
   padding-left: 16px;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 480px) {
+  .form__email {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 768px) {
   .form__email {
@@ -1067,6 +1101,7 @@ background-image: url(../img/astronaut.svg);
 }
 
 .modal {
+  width: 95%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1212,7 +1247,7 @@ background-image: url(../img/astronaut.svg);
 }
 
 .modal__textarea {
-  width: 370px;
+  width: 100%;
   height: 120px;
   font-size: 12px;
   font-weight: 400;
@@ -1228,11 +1263,6 @@ background-image: url(../img/astronaut.svg);
 .modal__textarea:focus-within, .modal__textarea:hover {
   border: 1px solid var(--accent-blue);
   outline: none;
-}
-@media screen and (min-width: 1200px) {
-  .modal__textarea {
-    width: 448px;
-  }
 }
 
 .modal__button {
@@ -1357,12 +1387,17 @@ background-image: url(../img/astronaut.svg);
 }
 
 .cards-list__item {
-  width: 450px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 .cards-list__item:not(:last-child) {
   margin-bottom: 30px;
+}
+@media screen and (min-width: 480px) {
+  .cards-list__item {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 768px) {
   .cards-list__item {
@@ -1396,6 +1431,7 @@ background-image: url(../img/astronaut.svg);
 .cards-list__link {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .cards-list__item:hover .cover-text {
@@ -1454,6 +1490,9 @@ background-image: url(../img/astronaut.svg);
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   flex-grow: 1;
 }
 @media screen and (min-width: 768px) {
