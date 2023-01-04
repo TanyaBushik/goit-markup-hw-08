@@ -30,5 +30,8 @@ button {
 
 footer {
  background-color: var(--hero-background-color);
-//  padding: 60px 0;
+
+  @media screen and (min-width: 480px) {
+    width: 100vw;
+  }
 }
