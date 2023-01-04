@@ -921,7 +921,7 @@ background-image: url(../img/astronaut.svg);
 }
 @media screen and (min-width: 1200px) {
   .footer-container {
-    display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
     align-items: baseline;
   }
