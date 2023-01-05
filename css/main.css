@@ -283,8 +283,22 @@ label.modal__text, .modal__button--close, .form__btn, .clients__link, .socials__
     padding-top: 0;
     padding-bottom: 0;
   }
-  .header__contacts .link:first-child {
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__item:first-child {
     margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__item:first-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__contacts .link {
+    margin-bottom: 0;
   }
 }
 
@@ -703,11 +717,8 @@ background-image: url(../img/astronaut.svg);
 
 .command {
   background-color: var(--section-background-color);
-}
-@media screen and (min-width: 1200px) {
-  .command {
-    width: 1600px;
-  }
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .command__list {

@@ -1,9 +1,7 @@
 .command {
   background-color: var(--section-background-color);
-
-  @media screen and (min-width: 1200px) {
-    width: 1600px;
-  }
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .command__list {
