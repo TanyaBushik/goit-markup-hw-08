@@ -14,9 +14,10 @@
 }
 
 .modal {
-  width: 95%;
+  // width: 95%;
+
    @media screen and (min-width: 480px){
-    max-width: 450px;
+    width: 450px;
     height: auto;
   }
 
